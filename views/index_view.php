@@ -10,6 +10,9 @@
          * ********************************************************/
         public function displayContent() {
 			?>
+                <h2>Repositiories</h2>
+                <p><a href="https://github.com/ARTidas/Queue">https://github.com/ARTidas/Queue</a></p>
+
 				<h2>TODO</h2>
                 <ol>
                     <li>Task types

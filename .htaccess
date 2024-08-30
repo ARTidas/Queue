@@ -6,3 +6,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # If the file or directory doesn't exist, redirect to index.php
 RewriteRule ^(.*)$ index.php [L,QSA]
+
+#Protect Directory
+#AuthName "Dialog prompt"
+#AuthType Basic
+#AuthUserFile .htpasswd
+#Require valid-user

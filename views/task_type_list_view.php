@@ -14,7 +14,7 @@
                     <thead>
                         <tr>
                             <?php
-                                foreach ($this->do->do_list[0]->getAttributes() as $key => $value) {
+                                foreach ((new TaskTypeDo)->getAttributes() as $key => $value) {
                                     if ($key !== 'class_actor') {
                                         print('<th>' . $key . '</th>');
                                     }
