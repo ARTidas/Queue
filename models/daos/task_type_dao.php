@@ -50,7 +50,8 @@
 				);
 			}
 			catch(Exception $exception) {
-				TavernRaidRequestResponseHelper::addToResponse('errors', $exception->getMessage());
+				LogHelper::addError('ERROR: ' . $exception->getMessage());
+
 				return false;
 			}
 		}

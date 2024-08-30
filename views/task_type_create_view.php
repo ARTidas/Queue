@@ -3,7 +3,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class TaskTypeCreateView extends ProjectAbstractView {
+	class TaskTypeCreateView extends AbstractView {
 
         /* ********************************************************
          * ********************************************************
@@ -13,8 +13,24 @@
                 <h1>Create <?php print(RequestHelper::$actor_name); ?></h1>
 
 				<form method="post" action="">
+                    
+                    <div class="log_warnings">
+                        <?php
+                            foreach (LogHelper::getWarnings() as $log) {
+                                print('<p>' . $log . '</p><hr />');
+                            }
+                        ?>
+                    </div>
+                    <div class="log_confirmations">
+                        <?php
+                            foreach (LogHelper::getConfirmations() as $log) {
+                                print('<p>' . $log . '</p><hr />');
+                            }
+                        ?>
+                    </div>
+
                     <?php
-                        foreach ((new TaskTypeDo)->getAttributes() as $key => $value) {
+                        foreach ($this->do->do->getAttributes() as $key => $value) {
                             if (ActorHelper::isAttributeRequired($key)) {
                     ?>
                                 <div>
@@ -30,7 +46,7 @@
                         }
                     ?>
 
-                    <input type="submit" name="Create" />
+                    <input type="submit" name="create" value="Create" />
                 </form>
 			<?php
 		}
