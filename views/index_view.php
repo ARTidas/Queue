@@ -17,7 +17,6 @@
                 <ol>
                     <li>Task types
                         <ol>
-                            <li>Create</li>
                             <li>Modify</li>
                         </ol>
                     </li>
@@ -37,6 +36,7 @@
                     <li>Task types
                         <ol>
                             <li>List</li>
+                            <li>Create</li>
                         </ol>
                     </li>
                 </ol>
