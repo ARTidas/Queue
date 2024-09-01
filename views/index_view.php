@@ -18,6 +18,8 @@
                     <li>Task types
                         <ol>
                             <li>Modify</li>
+                            <li>Creation - Warn if name is not unique</li>
+                            <li>Delete / Activate</li>
                         </ol>
                     </li>
                     <li>Tasks

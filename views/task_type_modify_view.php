@@ -29,24 +29,26 @@
                         ?>
                     </div>
 
-                    <?php
-                        foreach ($this->do->do->getAttributes() as $key => $value) {
-                            if (ActorHelper::isAttributeRequired($key)) {
-                    ?>
-                                <div>
-                                    <label for="<?php print($key); ?>"><?php print(ucfirst($key)); ?>:</label>
-                                    <input 
-                                        type="text" 
-                                        id="<?php print($key); ?>" 
-                                        name="<?php print($key); ?>" 
-                                        value="<?php print($value); ?>" />
-                                </div>
-                    <?php
-                            }
-                        }
-                    ?>
+                    <div>
+                        <label for="id">ID:</label>
+                        <select name="id">
+                            <option>-- Select --</option>
+                            <?php
+                                foreach ($this->do->do_list as $do) {
+                                    ?>
+                                        <option 
+                                            value="<?php print($do->id) ?>"
+                                            <?php if ($do->id == $this->do->do->id) {print('selected');} ?>
+                                        >
+                                            <?php print('#' . $do->id . ' - ' . $do->name); ?>
+                                        </option>
+                                    <?php
+                                }
+                            ?>
+                        </select>
+                    </div>
 
-                    <input type="submit" name="create" value="Create" />
+                    <input type="submit" name="select" value="Select" />
                 </form>
 
                 <hr />
@@ -71,22 +73,33 @@
 
                     <?php
                         foreach ($this->do->do->getAttributes() as $key => $value) {
-                            if (ActorHelper::isAttributeRequired($key)) {
+                            if (ActorHelper::isAttributeRequiredForModification($key)) {
+                                if ($key === 'id') {
+                                    ?>
+                                        <input 
+                                            type="hidden" 
+                                            id="<?php print($key); ?>" 
+                                            name="<?php print($key); ?>" 
+                                            value="<?php print($value); ?>" />
+                                    <?php
+                                }
+                                else {
                     ?>
-                                <div>
-                                    <label for="<?php print($key); ?>"><?php print(ucfirst($key)); ?>:</label>
-                                    <input 
-                                        type="text" 
-                                        id="<?php print($key); ?>" 
-                                        name="<?php print($key); ?>" 
-                                        value="<?php print($value); ?>" />
-                                </div>
+                                    <div>
+                                        <label for="<?php print($key); ?>"><?php print(ucfirst($key)); ?>:</label>
+                                        <input 
+                                            type="text" 
+                                            id="<?php print($key); ?>" 
+                                            name="<?php print($key); ?>" 
+                                            value="<?php print($value); ?>" />
+                                    </div>
                     <?php
+                                }
                             }
                         }
                     ?>
 
-                    <input type="submit" name="create" value="Create" />
+                    <input type="submit" name="modify" value="Modify" />
                 </form>
 			<?php
 		}

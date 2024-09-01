@@ -31,7 +31,7 @@
 
                     <?php
                         foreach ($this->do->do->getAttributes() as $key => $value) {
-                            if (ActorHelper::isAttributeRequired($key)) {
+                            if (ActorHelper::isAttributeRequiredForCreation($key)) {
                     ?>
                                 <div>
                                     <label for="<?php print($key); ?>"><?php print(ucfirst($key)); ?>:</label>

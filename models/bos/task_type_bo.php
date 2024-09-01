@@ -22,6 +22,25 @@
 			);
 		}
 
+		/* ********************************************************
+		 * ********************************************************
+		 * ********************************************************/
+		public function update(AbstractDo $do) {
+            $this->validateDo($do);
+
+            if (!$this->isDoValid($do)) {
+                return false;
+            }
+
+			return ($this->dao)->update(
+				[
+					$do->name,
+					$do->is_active,
+					$do->id
+				]
+			);
+		}
+
     }
 
 ?>
