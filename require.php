@@ -11,12 +11,15 @@
         require(RequestHelper::$common_file_root . '/models/bos/abstract_bo.php');
         require(RequestHelper::$file_root . '/models/bos/task_type_bo.php');
         require(RequestHelper::$file_root . '/models/bos/task_bo.php');
+        require(RequestHelper::$file_root . '/models/bos/task_execution_bo.php');
 
         /* ********************************************************
          * *** Data Access Objects ********************************
          * ********************************************************/
+        require(RequestHelper::$common_file_root . '/models/daos/abstract_dao.php');
         require(RequestHelper::$file_root . '/models/daos/task_type_dao.php');
         require(RequestHelper::$file_root . '/models/daos/task_dao.php');
+        require(RequestHelper::$file_root . '/models/daos/task_execution_dao.php');
 
         /* ********************************************************
          * *** Data Objects ***************************************
