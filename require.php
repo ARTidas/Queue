@@ -45,6 +45,7 @@
 	 * *** Views **********************************************
 	 * ********************************************************/
     require(RequestHelper::$common_file_root . '/views/abstract_view.php');
+    require(RequestHelper::$file_root . '/views/project_abstract_view.php');
     require(RequestHelper::$file_root . '/views/index_view.php');
     require(RequestHelper::$file_root . '/views/task_type_list_view.php');
     require(RequestHelper::$file_root . '/views/task_type_create_view.php');
