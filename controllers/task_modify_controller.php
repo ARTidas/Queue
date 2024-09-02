@@ -4,9 +4,13 @@
 
     if (isset($_POST['modify']) && $_POST['modify'] === 'Modify') {
         //TODO: Make this abstract!!!
-        $do->id         = $_POST['id'];
-        $do->name       = $_POST['name'];
-        $do->is_active  = $_POST['is_active'];
+        $do->id                 = $_POST['id'];
+        $do->task_type_id       = $_POST['task_type_id'];
+        $do->name               = $_POST['name'];
+        $do->description        = $_POST['description'];
+        $do->last_executed_at   = $_POST['last_executed_at'];
+        $do->script             = $_POST['script'];
+        $do->is_active          = $_POST['is_active'];
         
         LogHelper::addMessage('Modifying record with id: #' . $do->id);
 

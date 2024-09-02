@@ -24,9 +24,10 @@
     /* ********************************************************
 	 * *** Here is the main controlling logic... **************
 	 * ********************************************************/
-	RequestHelper::$request_array = explode('/', RequestHelper::$request_uri);
-    RequestHelper::$actor_name = empty(RequestHelper::$request_array[2]) ? 'index' : RequestHelper::$request_array[2];
-    RequestHelper::$actor_action = isset(RequestHelper::$request_array[3]) ? RequestHelper::$request_array[3] : 'list';
+	RequestHelper::$request_array       = explode('/', RequestHelper::$request_uri);
+    RequestHelper::$actor_name          = empty(RequestHelper::$request_array[2]) ? 'index' : RequestHelper::$request_array[2];
+    RequestHelper::$actor_action        = isset(RequestHelper::$request_array[3]) ? RequestHelper::$request_array[3] : 'list';
+    RequestHelper::$actor_class_name    = StringHelper::toPascalCase(RequestHelper::$actor_name);
     LogHelper::addMessage('project_name: ' . RequestHelper::$project_name);
     LogHelper::addMessage('actor_name: ' . RequestHelper::$actor_name);
     LogHelper::addMessage('actor_action: ' . RequestHelper::$actor_action);

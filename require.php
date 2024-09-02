@@ -10,11 +10,13 @@
         require(RequestHelper::$common_file_root . '/models/bos/mariadb_database_connection_bo.php');
         require(RequestHelper::$common_file_root . '/models/bos/abstract_bo.php');
         require(RequestHelper::$file_root . '/models/bos/task_type_bo.php');
+        require(RequestHelper::$file_root . '/models/bos/task_bo.php');
 
         /* ********************************************************
          * *** Data Access Objects ********************************
          * ********************************************************/
         require(RequestHelper::$file_root . '/models/daos/task_type_dao.php');
+        require(RequestHelper::$file_root . '/models/daos/task_dao.php');
 
         /* ********************************************************
          * *** Data Objects ***************************************
@@ -22,6 +24,7 @@
         require(RequestHelper::$common_file_root . '/models/dos/view_do.php');
         require(RequestHelper::$common_file_root . '/models/dos/abstract_do.php');
         require(RequestHelper::$file_root . '/models/dos/task_type_do.php');
+        require(RequestHelper::$file_root . '/models/dos/task_do.php');
 
         /* ********************************************************
          * *** Helpers ********************************************
@@ -46,5 +49,8 @@
     require(RequestHelper::$file_root . '/views/task_type_list_view.php');
     require(RequestHelper::$file_root . '/views/task_type_create_view.php');
     require(RequestHelper::$file_root . '/views/task_type_modify_view.php');
+    require(RequestHelper::$file_root . '/views/task_list_view.php');
+    require(RequestHelper::$file_root . '/views/task_create_view.php');
+    require(RequestHelper::$file_root . '/views/task_modify_view.php');
 
 ?>

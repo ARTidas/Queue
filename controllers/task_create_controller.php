@@ -3,7 +3,11 @@
     $do = new (RequestHelper::$actor_class_name . 'Do');
 
     if (isset($_POST['create']) && $_POST['create'] === 'Create') {
-        $do->name = $_POST['name'];
+        //TODO: Abstract attribute assignments...
+        $do->task_type_id   = $_POST['task_type_id'];
+        $do->name           = $_POST['name'];
+        $do->description    = $_POST['description'];
+        $do->script         = $_POST['script'];
 
         LogHelper::addConfirmation('Created record with id: #' . $bo->create($do));
     }
