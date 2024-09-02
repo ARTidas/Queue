@@ -28,6 +28,7 @@
         require(RequestHelper::$common_file_root . '/models/dos/abstract_do.php');
         require(RequestHelper::$file_root . '/models/dos/task_type_do.php');
         require(RequestHelper::$file_root . '/models/dos/task_do.php');
+        require(RequestHelper::$file_root . '/models/dos/task_execution_do.php');
 
         /* ********************************************************
          * *** Helpers ********************************************
@@ -56,5 +57,6 @@
     require(RequestHelper::$file_root . '/views/task_list_view.php');
     require(RequestHelper::$file_root . '/views/task_create_view.php');
     require(RequestHelper::$file_root . '/views/task_modify_view.php');
+    require(RequestHelper::$file_root . '/views/task_execution_list_view.php');
 
 ?>

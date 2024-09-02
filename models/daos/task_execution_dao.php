@@ -23,6 +23,7 @@
 					MAIN.is_active = 1
                 ORDER BY
                     MAIN.created_at DESC
+				LIMIT 100
 			";
 
 			try {
