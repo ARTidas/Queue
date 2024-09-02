@@ -15,32 +15,16 @@
 
 				<h2>TODO</h2>
                 <ol>
-                    <li>Task types
+                    <li>Actors
                         <ol>
-                            <li>Modify</li>
                             <li>Creation - Warn if name is not unique</li>
                             <li>Delete / Activate</li>
                         </ol>
                     </li>
-                    <li>Tasks
-                        <ol>
-                            <li>List</li>
-                            <li>Create</li>
-                            <li>Modify</li>
-                        </ol>
-                    </li>
+                    
+                    <li>AJAX refresh for task exection list</li>
                     <li>Automatic menu</li>
                     <li>Create documentation</li>
-                </ol>
-
-                <h2>DONE</h2>
-                <ol>
-                    <li>Task types
-                        <ol>
-                            <li>List</li>
-                            <li>Create</li>
-                        </ol>
-                    </li>
                 </ol>
 			<?php
 		}
