@@ -1,5 +1,17 @@
 <?php
 
+    if (
+        //!PermissionHelper::isUserAuthorized('Demonstrator') &&
+        !PermissionHelper::isUserAuthorized('NewsWatch administrator')
+    ) {
+        LogHelper::addWarning('Not authorized...');
+        header('Location: ' . RequestHelper::$common_url_root . '/user_permission/request');
+        exit();
+    }
+    else {
+        LogHelper::addMessage('User authorized...');
+    }
+
     $do = new (RequestHelper::$actor_class_name . 'Do');
 
     if (isset($_POST['create']) && $_POST['create'] === 'Create') {
